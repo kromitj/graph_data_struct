@@ -18,8 +18,8 @@ class NodeSet
   end
 
   def show_node(node_id)
-    index_of_node = find_node(node_id)
-    p 'Node Id: {@node_instances[index_of_node]}'
+    index_of_node = find_node_index(node_id)
+    p "Node Id: #{@node_instances[index_of_node]}"
     return nil
   end
 

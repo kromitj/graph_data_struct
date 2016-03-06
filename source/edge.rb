@@ -13,11 +13,6 @@ class Edge
     @nodes << nodeB
   end
 
-  def show_edge
-    p "Edge Id: #{edge_id}"
-    return nil
-  end
-
   def show_edge_nodes
     p "          Edge Id: #{edge_id} has these nodes"
     p "                First Node: #{@nodes[0].node_id}"

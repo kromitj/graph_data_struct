@@ -32,7 +32,6 @@ class Node
   def show_node_edges
     p "Node Id: #{node_id} has these edges"
     @edges.edge_instances.each do |edge|
-      p edge.show_edge
       p edge.show_edge_nodes
     end
     return nil

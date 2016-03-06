@@ -1,4 +1,3 @@
-require_relative '../source/edge'
 require_relative '../source/node'
 require_relative '../source/edge_set'
 

@@ -1,5 +1,3 @@
-require_relative '../source/edge'
-require_relative '../source/node'
 require_relative '../source/graph'
 
 describe Graph do
@@ -30,7 +28,6 @@ describe Graph do
     graph_one.node_set.add_node
     graph_one.node_set.add_node
     node_id = graph_one.node_set.node_instances.last.node_id
-    p "node id: #{node_id}"
     graph_one.node_set.remove_node(node_id)
     expect(graph_one.node_set.node_instances.count).to eq 1
   end
