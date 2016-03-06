@@ -20,15 +20,16 @@ describe EdgeSet do
     expect(edge_set.edge_instances.count).to eq 1
   end
 
-  # it 'new node of type Node' do
-  #   node_set.add_node
-  #   expect(node_set.node_instances.first.class).to eq Node
-  # end
-  # it 'able to remove a node from node_set' do
-  #   node_set.add_node
-  #   node_set.add_node
-  #   node_id = node_set.node_instances.last.node_id
-  #   node_set.remove_node(node_id)
-  #   expect(node_set.node_instances.count).to eq 1
-  # end
+  it 'able to remove an edge from edge_set' do
+    edge_set.add_edge(node_one, node_two)
+    edge_id = edge_set.edge_instances.last.edge_id
+    edge_set.remove_edge(edge_id)
+    expect(edge_set.edge_instances.count).to eq 0
+  end
+
+  it 'able to show a specific edge' do
+    edge_set.add_edge(node_one, node_two)    
+    expect(edge_set.show_edge(edge_set.edge_instances[0].edge_id).class).to eq Edge
+  end
+  
 end

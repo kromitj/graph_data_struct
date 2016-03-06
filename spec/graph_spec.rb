@@ -16,26 +16,22 @@ describe Graph do
     expect(graph_one.node_set.class).to eq NodeSet
   end
 
-  it 'initializes with a instance var edge_set:Array' do
-    expect(graph_one.edge_set.class).to eq Array
-  end
-
   it 'able to add a node to node_set' do
-    graph_one.add_node
-    expect(graph_one.node_set.count).to eq 1
+    graph_one.node_set.add_node
+    expect(graph_one.node_set.node_instances.count).to eq 1
   end
 
-  it 'new node if of type Node' do
-    graph_one.add_node
-    expect(graph_one.node_set.first.class).to eq Node
+  it 'new node is of type Node' do
+    graph_one.node_set.add_node
+    expect(graph_one.node_set.node_instances.first.class).to eq Node
   end
+
   it 'able to remove a node from node_set' do
-    graph_one.add_node
-    graph_one.add_node
-    node_id = graph_one.node_set.last.node_id
-    graph_one.remove_node(node_id)
-    expect(graph_one.node_set.count).to eq 1
+    graph_one.node_set.add_node
+    graph_one.node_set.add_node
+    node_id = graph_one.node_set.node_instances.last.node_id
+    p "node id: #{node_id}"
+    graph_one.node_set.remove_node(node_id)
+    expect(graph_one.node_set.node_instances.count).to eq 1
   end
-
-
 end
