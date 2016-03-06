@@ -16,7 +16,7 @@ describe Node do
   end
 
   it 'able to access the node id' do
-    expect(node_one.node_id.class).to eq Int
+    expect(node_one.node_id.class).to eq Fixnum
   end
 
   it 'able to add an edge to edges' do
@@ -30,23 +30,4 @@ describe Node do
     node_one.remove_edge(edge_to_rm)
     expect(node_one.edges.include?(edge_to_rm)).to eq false
   end
-
-  # it 'Able to modify the location' do
-  #   player_one.move(5)
-  #   expect(player_one.get_location).to eq 5
-  # end
-
-  # it 'Able to see if the player is past the finish line' do
-  #   expect(player_one.past_finish_line?(10)).to eq false
-  # end
-
-  # it 'Past finish line returns true when player location is >= track length' do
-  #   player_one.move(5)
-  #   expect(player_one.past_finish_line?(4)).to eq true
-  # end
-
-  # it 'Changes @player_won variable to true if past_finish_line? returns true' do
-  #   player_one.move(5)
-  #   expect(player_one.player_won(4)).to eq true
-  # end
 end
