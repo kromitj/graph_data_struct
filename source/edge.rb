@@ -15,8 +15,7 @@ class Edge
 
   def show_edge_nodes
     p "          Edge Id: #{edge_id} has these nodes"
-    p "                First Node: #{@nodes[0].node_id}"
-    p "                Second Node: #{@nodes[1].node_id}"
+    p "                Nodes = #{@nodes[0].node_id} & #{@nodes[1].node_id} "
     return nil
   end
 
