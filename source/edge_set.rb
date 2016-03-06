@@ -8,8 +8,18 @@ class EdgeSet
   end
 
   def add_edge(node1, node2)
-    @edge_instances << Edge.new(node1, node2)
-    p "new edge id: #{@edge_instances.last.edge_id}"
+      @edge_instances << Edge.new(node1, node2)
+      p "new edge id: #{@edge_instances.last.edge_id}"
+  end
+
+  def edge_exists?(node1, node2)      
+    @edge_instances.each do |edge|
+      if (node1.node_id == edge.nodes[0].node_id) && (node2.node_id == edge.nodes[1].node_id)
+       p "Edge Already Exists!"
+       return true
+     end
+    end
+    return false
   end
 
   def copy_edge(edge_to_copy)

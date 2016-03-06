@@ -1,15 +1,42 @@
 require_relative 'graph'
 
 graph = Graph.new
-graph.node_set.add_node
-graph.node_set.add_node
-graph.node_set.add_node
-graph.node_set.add_node
-graph.node_set.find_node(1).add_edge(graph.node_set.find_node(2))
-graph.node_set.find_node(1).add_edge(graph.node_set.find_node(4))
-graph.node_set.find_node(1).show_node_edges
-graph.node_set.find_node(2).show_node_edges
-graph.node_set.show_node(4)
+p "graph.add_node"
+graph.add_node
+p "graph.add_node"
+graph.add_node
+p "graph.add_node"
+graph.add_node
+p "graph.add_node"
+graph.add_node
+p "graph.add_node"
+graph.add_node
+p "graph.add_edge(1,2)"
+graph.add_edge(1,2)
+p "graph.add_edge(1,5)"
+graph.add_edge(1,5)
+p "graph.add_edge(3,4)"
+graph.add_edge(3,4)
+p "graph.add_edge(1,2)"
+graph.add_edge(1,2)
+p "graph.add_edge(1,5)"
+graph.add_edge(1,5)
+p "graph.add_edge(1,5)"
+graph.add_edge(1,5)
+p "graph.add_edge(1,5)"
+graph.add_edge(1,5)
+p "graph.add_edge(1,5)"
+graph.add_edge(1,5)
+p "graph.show_node_edges(5)"
+graph.show_node_edges(5)
+p "graph.show_node_edges(1)"
+graph.show_node_edges(1)
+p "graph.show_node_edges(4)"
+graph.show_node_edges(4)
+p "graph.show_vertex_set"
+graph.show_vertex_set
+p "graph.show_edge_set"
+graph.show_edge_set
 
 
 

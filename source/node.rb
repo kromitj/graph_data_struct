@@ -12,8 +12,10 @@ class Node
   end
 
   def add_edge(other_node)
-    @edges.add_edge(self, other_node)
-    add_remote_edge(other_node, self)
+    unless @edges.edge_exists?(self, other_node)
+      @edges.add_edge(self, other_node)
+      add_remote_edge(other_node, self)
+    end
   end
 
   def add_remote_edge(other_node, this_node)

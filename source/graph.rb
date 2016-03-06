@@ -12,6 +12,39 @@ class Graph
     return nil
   end
 
+  def add_node
+    @node_set.add_node
+  end
+
+  def add_edge(node1_id, node2_id)
+    @node_set.find_node(node1_id).add_edge(@node_set.find_node(node2_id))
+  end
+
+  def show_node_edges(node_id)
+    @node_set.find_node(node_id).show_node_edges
+  end
+
+  def show_vertex_set
+    vertex_set = 'V = {'
+    @node_set.node_instances.each do |node|
+      vertex_set << "#{node.node_id}, "
+    end 
+    p vertex_set << "}"
+  end
+
+  def show_edge_set
+    edge_set = [['E = {']]
+    @node_set.node_instances.each do |node|
+      node.edges.edge_instances.each do |edge|
+          unless edge_set.include?("#{edge.nodes[0].node_id}|#{edge.nodes[1].node_id}, ")
+            edge_set << "#{edge.nodes[0].node_id}|#{edge.nodes[1].node_id}, "
+          end
+      end
+    end
+    edge_set << "}"
+    p edge_set.join("")
+  end
+
 end
 # load 'graph.rb'
 # graph = Graph.new
