@@ -1,5 +1,4 @@
 require_relative 'edge.rb'
-require_relative 'node.rb'
 
 class EdgeSet
   attr_accessor :edge_instances

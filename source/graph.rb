@@ -1,7 +1,5 @@
-require_relative 'edge'
-require_relative 'node'
 require_relative 'node_set'
-require_relative 'edge_set'
+
 class Graph
   attr_accessor :node_set
   def initialize

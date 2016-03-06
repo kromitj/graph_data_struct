@@ -1,4 +1,3 @@
-require_relative 'node'
 
 class Edge
   @@edge_instances = 0
@@ -7,7 +6,7 @@ class Edge
 
   def initialize(nodeA, nodeB)
     @@edge_instances += 1
-    @edge_id = Edge.edge_instances
+    @edge_id = @@edge_instances
     p "edge instance: #{@edge_id}"
     @nodes = Array.new()
     @nodes << nodeA
